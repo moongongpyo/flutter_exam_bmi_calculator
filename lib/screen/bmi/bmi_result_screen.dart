@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../stop_watch/stop_watch_screen.dart';
+
 //화면에 변경이 없는 위젯, 성능이 더 좋음
-class ResultScreen extends StatelessWidget {
+class BmiResultScreen extends StatelessWidget {
   final double height;
   final double weight;
 
-  const ResultScreen({
+  const BmiResultScreen({
     super.key,
     required this.height,
     required this.weight,
@@ -67,6 +69,22 @@ class ResultScreen extends StatelessWidget {
               style: TextStyle(fontSize: 36),
             ),
             _buildIcon(bmi),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => StopWatchScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('스톱워치'),
+                ),
+              ],
+            ),
           ],
         ),
       ),

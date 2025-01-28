@@ -1,15 +1,15 @@
-import 'package:bmi_calculator/result/result_screen.dart';
+import 'package:bmi_calculator/screen/bmi/bmi_result_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class BmiScreen extends StatefulWidget {
+  const BmiScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<BmiScreen> createState() => _BmiScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _BmiScreenState extends State<BmiScreen> {
   //폼의 상태를 가지고 있는 것임
   final _formKey = GlobalKey<FormState>();
   final _heightController = TextEditingController();
@@ -116,7 +116,7 @@ class _MainScreenState extends State<MainScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultScreen(
+                      builder: (context) => BmiResultScreen(
                         height: double.parse(_heightController.text),
                         weight: double.parse(_weightController.text),
                       ),
