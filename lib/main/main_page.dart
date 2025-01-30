@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:bmi_calculator/screen/bmi/bmi_screen.dart';
+
 //stful : stateful widget 기본 틀 자동완성
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -34,6 +36,18 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('홈'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_forward),
+            onPressed: () {
+              // 다음 페이지로 이동
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BmiScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: Center(
         child: SingleChildScrollView(

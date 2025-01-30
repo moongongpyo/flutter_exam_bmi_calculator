@@ -23,6 +23,8 @@ linter:
   rules:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
-
+    - prefer_const_constructors  # const 생성자 사용 권장
+    - prefer_const_declarations  # const 선언 가능하면 const 사용
+    - prefer_const_literals_to_create_immutables  # 리스트, 맵, 셋에서 const 권장
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

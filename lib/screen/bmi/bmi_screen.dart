@@ -2,6 +2,8 @@ import 'package:bmi_calculator/screen/bmi/bmi_result_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:bmi_calculator/screen/stop_watch/stop_watch_screen.dart';
+
 class BmiScreen extends StatefulWidget {
   const BmiScreen({super.key});
 
@@ -64,6 +66,18 @@ class _BmiScreenState extends State<BmiScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('비만도 계산기'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_forward),
+            onPressed: () {
+              // 다음 페이지로 이동
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => StopWatchScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

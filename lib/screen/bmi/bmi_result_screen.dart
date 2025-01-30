@@ -66,25 +66,9 @@ class BmiResultScreen extends StatelessWidget {
           children: [
             Text(
               _calcBmi(bmi),
-              style: TextStyle(fontSize: 36),
+              style: const TextStyle(fontSize: 36),
             ),
             _buildIcon(bmi),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => StopWatchScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text('스톱워치'),
-                ),
-              ],
-            ),
           ],
         ),
       ),
