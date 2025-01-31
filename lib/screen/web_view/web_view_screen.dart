@@ -1,5 +1,5 @@
 
-import 'package:bmi_calculator/screen/stop_watch/stop_watch_screen.dart';
+import 'package:bmi_calculator/my_gallery/my_gallery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -48,10 +48,10 @@ class _webViewScreenState extends State<webViewScreen> {
           IconButton(
             icon: const Icon(Icons.arrow_forward),
             onPressed: () {
-              /*   Navigator.push(
+                 Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ),
-              );*/
+                MaterialPageRoute(builder: (context) => const MyGalleryScreen()),
+              );
             },
           ),
         ],

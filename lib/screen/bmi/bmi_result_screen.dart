@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../stop_watch/stop_watch_screen.dart';
 
 //화면에 변경이 없는 위젯, 성능이 더 좋음
 class BmiResultScreen extends StatelessWidget {

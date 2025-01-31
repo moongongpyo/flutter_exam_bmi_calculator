@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8   #애플 스타일의 아이콘
   shared_preferences: ^2.4.0  #상태 저장 라이브러리
   webview_flutter: ^4.10.0
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:

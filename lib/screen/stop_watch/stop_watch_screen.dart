@@ -118,6 +118,7 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
+                heroTag: 'resetButton',
                 backgroundColor: Colors.orange,
                 onPressed: () {
                   setState(() {
@@ -127,6 +128,7 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
                 child: const Icon(Icons.refresh),
               ),
               FloatingActionButton(
+                  heroTag: 'startPauseButton',
                   onPressed: () {
                     setState(() {
                       _clickButton();
@@ -136,6 +138,7 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
                       ? const Icon(Icons.pause)
                       : const Icon(Icons.play_arrow)),
               FloatingActionButton(
+                heroTag: 'lapButton',
                 backgroundColor: Colors.green,
                 onPressed: () {
                   setState(() {
