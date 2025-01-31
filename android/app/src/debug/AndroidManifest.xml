@@ -3,5 +3,6 @@
          the Flutter tool needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
+<!--인터넷 권한 부여, 여기서는 디버그 시에만 합쳐짐 따라서 출시 시에는 main 부분의 설정에 따로 추가 해야 함-->
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

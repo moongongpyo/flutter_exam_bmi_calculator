@@ -35,15 +35,15 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('홈'),
+        title: const Text('홈'),
         actions: [
           IconButton(
-            icon: Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward),
             onPressed: () {
               // 다음 페이지로 이동
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => BmiScreen()),
+                MaterialPageRoute(builder: (context) => const BmiScreen()),
               );
             },
           ),
@@ -59,9 +59,9 @@ class _MainPageState extends State<MainPage> {
                 width: 100,
                 height: 100
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               Container(height: 30),
-              Text(
+              const Text(
                 '숫자',
                 style: TextStyle(
                   color: Colors.black,
@@ -70,7 +70,7 @@ class _MainPageState extends State<MainPage> {
               ),
               Text(
                 '$number',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.red,
                   fontSize: 70,
                 ),
@@ -79,19 +79,19 @@ class _MainPageState extends State<MainPage> {
                 onPressed: () {
                   print('ElevatedButton');
                 },
-                child: Text('ElevatedButton'),
+                child: const Text('ElevatedButton'),
               ),
               TextButton(
                 onPressed: () {
                   print('TextButton');
                 },
-                child: Text('TextButton'),
+                child: const Text('TextButton'),
               ),
               OutlinedButton(
                 onPressed: () {
                   print('OutlinedButton');
                 },
-                child: Text('OutlinedButton'),
+                child: const Text('OutlinedButton'),
               ),
               Row(
                 children: [
@@ -99,7 +99,7 @@ class _MainPageState extends State<MainPage> {
                     flex: 3,
                     child: TextField(
                       controller: _textController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: '글자',
                         border: OutlineInputBorder(),
                       ),
@@ -113,7 +113,7 @@ class _MainPageState extends State<MainPage> {
                         //화면 갱신
                         setState(() {});
                       },
-                      child: Text('login'),
+                      child: const Text('login'),
                     ),
                   ),
                 ],
@@ -148,7 +148,7 @@ class _MainPageState extends State<MainPage> {
             number++;
           });
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -11,7 +11,7 @@ class IosStyleScreen extends StatefulWidget {
 class _IosStyleScreenState extends State<IosStyleScreen> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return const CupertinoApp(
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text('쿠퍼티노 앱'),

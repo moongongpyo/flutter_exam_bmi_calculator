@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'package:bmi_calculator/screen//web_view/web_view_screen.dart';
+
 class StopWatchScreen extends StatefulWidget {
   const StopWatchScreen({super.key});
 
@@ -71,6 +73,18 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('스톱워치'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_forward),
+            onPressed: () {
+              // 다음 페이지로 이동
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => webViewScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [

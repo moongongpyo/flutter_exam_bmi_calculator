@@ -65,15 +65,15 @@ class _BmiScreenState extends State<BmiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('비만도 계산기'),
+        title: const Text('비만도 계산기'),
         actions: [
           IconButton(
-            icon: Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward),
             onPressed: () {
               // 다음 페이지로 이동
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => StopWatchScreen()),
+                MaterialPageRoute(builder: (context) => const StopWatchScreen()),
               );
             },
           ),
@@ -101,7 +101,7 @@ class _BmiScreenState extends State<BmiScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               TextFormField(
                 controller: _weightController,
                 decoration: const InputDecoration(
@@ -116,7 +116,7 @@ class _BmiScreenState extends State<BmiScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               ElevatedButton(
                 onPressed: () {
                   //값이 유효하지 않다면 여기서 리턴을 하여 코드가 더이상 진행되지 않도록 막음
