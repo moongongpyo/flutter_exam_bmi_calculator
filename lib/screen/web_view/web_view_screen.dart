@@ -1,5 +1,5 @@
 
-import 'package:bmi_calculator/my_gallery/my_gallery_screen.dart';
+import 'package:bmi_calculator/screen/my_gallery/my_gallery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
