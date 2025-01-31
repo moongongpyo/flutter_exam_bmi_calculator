@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:typed_data'; // 추가
+import 'package:bmi_calculator/screen/tilt_sensor/tilt_sensor.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -56,10 +57,10 @@ class _MyGalleryScreenState extends State<MyGalleryScreen> {
           IconButton(
               icon: const Icon(Icons.arrow_forward),
               onPressed: () {
-                /*   Navigator.push(
+                   Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ),
-              );*/
+                MaterialPageRoute(builder: (context) => const TiltSensor()),
+              );
               }),
         ],
       ),
