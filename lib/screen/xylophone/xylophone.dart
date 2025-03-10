@@ -1,4 +1,6 @@
-import 'package:bmi_calculator/screen/gps_map/gps_map.dart';
+
+import 'package:bmi_calculator/screen/todo_list/list_screen.dart';
+import 'package:bmi_calculator/util/orientation_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:soundpool/soundpool.dart';
@@ -19,8 +21,12 @@ class _XylophoneState extends State<Xylophone> {
   @override
   void initState() {
     super.initState();
+    OrientationUtil.setLandscape(); // 가로 모드 적용
     initSoundPool();
   }
+
+
+
 
   Future<void> initSoundPool() async {
     int soundId = await rootBundle
@@ -70,6 +76,7 @@ class _XylophoneState extends State<Xylophone> {
 
   @override
   Widget build(BuildContext context) {
+
     SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
     return Scaffold(
       appBar: AppBar(
@@ -78,11 +85,15 @@ class _XylophoneState extends State<Xylophone> {
           IconButton(
             icon: const Icon(Icons.arrow_forward),
             onPressed: () {
+              // 화면 방향을 세로로 변경
+              SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
               // 다음 페이지로 이동
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const GpsMap()),
+                MaterialPageRoute(builder: (context) => const ListScreen()),
               );
+
             },
           ),
         ],
