@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/screen/xylophone/xylophone.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sensors_plus/sensors_plus.dart';
@@ -19,6 +20,17 @@ class TiltSensor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('수평 측정기'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.arrow_forward),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Xylophone()),
+              );
+            },
+          ),
+        ],
       ),
       //Stack은 여러 개의 위젯이 z 축으로 겹칠 수 있게 해줌
       body: Stack(
@@ -34,7 +46,6 @@ class TiltSensor extends StatelessWidget {
                 }
 
                 final event = snapshot.data!;
-                List<double> accelerometerValues = [event.x, event.y, event.z];
 
                 return Positioned(
                   left: centerX + event.y * 20,
