@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/screen/gps_map/gps_map.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:soundpool/soundpool.dart';
@@ -33,7 +34,7 @@ class _XylophoneState extends State<Xylophone> {
     _soundIds.add(soundId);
 
     soundId = await rootBundle
-        .load('assets/m1.wav')
+        .load('assets/mi.wav')
         .then((soundData) => pool.load(soundData));
     _soundIds.add(soundId);
 
@@ -48,7 +49,7 @@ class _XylophoneState extends State<Xylophone> {
     _soundIds.add(soundId);
 
     soundId = await rootBundle
-        .load('assets/ra.wav')
+        .load('assets/la.wav')
         .then((soundData) => pool.load(soundData));
     _soundIds.add(soundId);
 
@@ -73,6 +74,18 @@ class _XylophoneState extends State<Xylophone> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('실로폰'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.arrow_forward),
+            onPressed: () {
+              // 다음 페이지로 이동
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const GpsMap()),
+              );
+            },
+          ),
+        ],
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())

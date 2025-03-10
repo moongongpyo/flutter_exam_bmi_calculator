@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "kr.n5v5w2l.bmi_calculator"
-    compileSdk = 34
+    compileSdk = 35
 
 
     compileOptions {

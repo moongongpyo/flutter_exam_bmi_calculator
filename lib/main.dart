@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/screen/gps_map/gps_map.dart';
+import 'package:bmi_calculator/screen/xylophone/xylophone.dart';
 import 'package:flutter/material.dart';
 
 import 'main/main_page.dart';
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         useMaterial3: true,
       ),
+      //home: const MainPage(),
       home: const MainPage(),
     );
   }
